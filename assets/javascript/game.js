@@ -39,7 +39,7 @@ resetButton.addEventListener("click", function (){
     goalsTeamOne.innerHTML = 0;
     goalsTeamTwo.innerHTML = 0;
 
-})
+});
 
 
 
