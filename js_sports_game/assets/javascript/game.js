@@ -5,42 +5,47 @@ let goalsTeamOne = document.querySelector("#teamone-numgoals");
 let teamoneShootButton = document.querySelector("#teamone-shoot-button");
 
 teamoneShootButton.addEventListener("click", function () {
-    let myNewCounterValue = Number(shotsTakenTeamOne.innerHTML) + 1;
-    shotsTakenTeamOne.innerHTML = myNewCounterValue;
+    let teamoneGoalsScored = Number(shotsTakenTeamOne.innerHTML) + 1;
+    shotsTakenTeamOne.innerHTML = teamoneGoalsScored;
     if (Math.random() * 100 < 30) {
-        let scoreGoals = Number(goalsTeamOne.innerHTML) + 1;
-        goalsTeamOne.innerHTML = scoreGoals;
+        let teamoneGoalsScored= Number(goalsTeamOne.innerHTML) + 1;
+        goalsTeamOne.innerHTML = teamoneGoalsScored;
     }
 });
+
 let shotsTakenTeamTwo = document.querySelector("#teamtwo-numshots");
-let goalsTeamTwo = document.querySelector("#teamtwo-numgoals");
+let goalsTeamTwo= document.querySelector("#teamtwo-numgoals");
 let teamTwoShootButton = document.querySelector("#teamtwo-shoot-button");
 
 teamTwoShootButton.addEventListener("click", function () {
-    let meTeamTwoScale = Number(shotsTakenTeamTwo.innerHTML) + 1;
-    shotsTakenTeamTwo.innerHTML = meTeamTwoScale;
+    let teamTwoGoalsScored = Number(shotsTakenTeamTwo.innerHTML) + 1;
+    shotsTakenTeamTwo.innerHTML = teamTwoGoalsScored ;
 
     if (Math.random() * 100 < 45) {
-        let meTeamTwoScale = Number(goalsTeamTwo.innerHTML) + 1;
-        goalsTeamTwo.innerHTML = meTeamTwoScale;
+        let teamTwoGoalsScored  = Number(goalsTeamTwo.innerHTML) + 1;
+        goalsTeamTwo.innerHTML = teamTwoGoalsScored ;
     }
 });
 
-let resetButton = document.querySelector("#reset-button");
-let numberOfResets = document.querySelector("num-resets");
 
-resetButton.addEventListener("click", function () {
-    let resets = Number(numberOfResets.innerHTML) + 1;
-    numberOfResets.innerHTML = resets;
-    let myNewCounterValue = 0;
+let resetButton = document.querySelector ("#reset-button");
+let numberOfReset = document.querySelector("#num-resets");
+
+resetButton.addEventListener("click", function (){
+    let reset = Number (numberOfReset.innerHTML) + 1;
+    numberOfReset.innerHTML = reset;
     shotsTakenTeamOne.innerHTML = 0;
-    let shotsTakenTeamTwo = 0;
     shotsTakenTeamTwo.innerHTML = 0;
-    let scoreGoals = 0;
     goalsTeamOne.innerHTML = 0;
-    let meTeamTwoScale = 0;
     goalsTeamTwo.innerHTML = 0;
 
 
+    console.log("resetButton");
+
 });
-//
+
+
+
+
+
+
